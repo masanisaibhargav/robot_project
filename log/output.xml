@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230119 14:18:07.674" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo3" source="C:\Users\40032395\OneDrive - LTTS\Robots_projets\Robot_suit\demo3.robot">
-<test id="s1-t1" name="TC5" line="32">
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${emp_dic}</var>
-<arg>emp_id=12345</arg>
-<arg>emp_name=jack</arg>
-<arg>role=asdfgh</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230119 14:18:07.746" level="INFO">${emp_dic} = {'emp_id': '12345', 'emp_name': 'jack', 'role': 'asdfgh'}</msg>
-<status status="PASS" starttime="20230119 14:18:07.746" endtime="20230119 14:18:07.746"/>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230119 15:22:42.990" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo10 Actions" source="C:\Users\40032395\OneDrive - LTTS\Robots_projets\selenium_suits\demo10_actions.robot">
+<test id="s1-t1" name="TC1" line="4">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230119 15:22:43.452" level="INFO">Opening browser 'edge' to base url 'None'.</msg>
+<status status="PASS" starttime="20230119 15:22:43.451" endtime="20230119 15:22:48.555"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${emp_dic}[role]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230119 14:18:07.746" endtime="20230119 14:18:07.746"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230119 15:22:48.556" endtime="20230119 15:22:48.688"/>
 </kw>
-<status status="PASS" starttime="20230119 14:18:07.739" endtime="20230119 14:18:07.746"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>30s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230119 15:22:48.688" endtime="20230119 15:22:48.698"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=https://nasscom.in</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230119 15:22:48.700" level="INFO">Opening url 'https://nasscom.in'</msg>
+<status status="PASS" starttime="20230119 15:22:48.699" endtime="20230119 15:23:13.753"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>xpath=//a[text()='Membership']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230119 15:23:13.757" level="INFO">Simulating Mouse Over on element 'xpath=//a[text()='Membership']'.</msg>
+<status status="PASS" starttime="20230119 15:23:13.755" endtime="20230119 15:23:19.080"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[text()='Members Listing']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230119 15:23:19.080" level="INFO">Clicking element 'xpath=//a[text()='Members Listing']'.</msg>
+<status status="PASS" starttime="20230119 15:23:19.080" endtime="20230119 15:23:34.748"/>
+</kw>
+<status status="PASS" starttime="20230119 15:22:43.449" endtime="20230119 15:23:34.748"/>
 </test>
-<status status="PASS" starttime="20230119 14:18:07.680" endtime="20230119 14:18:07.746"/>
+<status status="PASS" starttime="20230119 15:22:42.994" endtime="20230119 15:23:34.748"/>
 </suite>
 <statistics>
 <total>
@@ -27,9 +46,123 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo3">Demo3</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo10 Actions">Demo10 Actions</stat>
 </suite>
 </statistics>
 <errors>
+</errors>
+</robot>
+:EventProperty [0x00007FF73CAC94CA+42362]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CACC205+53941]
+	Microsoft::Applications::Events::ILogManager::DispatchEventBroadcast [0x00007FF73CDE7E13+1456611]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB91ABA+863082]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96BA4+883796]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96CFC+884140]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB9FCCE+920958]
+	BaseThreadInitThunk [0x00007FFD555E74B4+20]
+	RtlUserThreadStart [0x00007FFD564A26A1+33]
+</msg>
+<msg timestamp="20230119 15:22:55.617" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=109.0.1518.55)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF73CBF0A12+15186]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB89562+828946]
+	(No symbol) [0x00007FF73C84ED90]
+	(No symbol) [0x00007FF73C827ED4]
+	(No symbol) [0x00007FF73C8B5E5D]
+	(No symbol) [0x00007FF73C8CABF7]
+	(No symbol) [0x00007FF73C8B1D23]
+	(No symbol) [0x00007FF73C883B80]
+	(No symbol) [0x00007FF73C882B0E]
+	(No symbol) [0x00007FF73C884344]
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF73CA6B190+182768]
+	(No symbol) [0x00007FF73C93EF45]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CAC94CA+42362]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CACC205+53941]
+	Microsoft::Applications::Events::ILogManager::DispatchEventBroadcast [0x00007FF73CDE7E13+1456611]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB91ABA+863082]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96BA4+883796]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96CFC+884140]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB9FCCE+920958]
+	BaseThreadInitThunk [0x00007FFD555E74B4+20]
+	RtlUserThreadStart [0x00007FFD564A26A1+33]
+</msg>
+<status status="FAIL" starttime="20230119 15:22:55.543" endtime="20230119 15:22:55.631"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[text()='Members Listing']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230119 15:22:55.632" endtime="20230119 15:22:55.633"/>
+</kw>
+<status status="FAIL" starttime="20230119 15:22:16.787" endtime="20230119 15:22:55.634">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=109.0.1518.55)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF73CBF0A12+15186]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB89562+828946]
+	(No symbol) [0x00007FF73C84ED90]
+	(No symbol) [0x00007FF73C827ED4]
+	(No symbol) [0x00007FF73C8B5E5D]
+	(No symbol) [0x00007FF73C8CABF7]
+	(No symbol) [0x00007FF73C8B1D23]
+	(No symbol) [0x00007FF73C883B80]
+	(No symbol) [0x00007FF73C882B0E]
+	(No symbol) [0x00007FF73C884344]
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF73CA6B190+182768]
+	(No symbol) [0x00007FF73C93EF45]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CAC94CA+42362]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CACC205+53941]
+	Microsoft::Applications::Events::ILogManager::DispatchEventBroadcast [0x00007FF73CDE7E13+1456611]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB91ABA+863082]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96BA4+883796]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96CFC+884140]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB9FCCE+920958]
+	BaseThreadInitThunk [0x00007FFD555E74B4+20]
+	RtlUserThreadStart [0x00007FFD564A26A1+33]
+</status>
+</test>
+<status status="FAIL" starttime="20230119 15:22:16.262" endtime="20230119 15:22:55.636"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo10 Actions">Demo10 Actions</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230119 15:22:55.617" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=109.0.1518.55)
+Stacktrace:
+Backtrace:
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF73CBF0A12+15186]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB89562+828946]
+	(No symbol) [0x00007FF73C84ED90]
+	(No symbol) [0x00007FF73C827ED4]
+	(No symbol) [0x00007FF73C8B5E5D]
+	(No symbol) [0x00007FF73C8CABF7]
+	(No symbol) [0x00007FF73C8B1D23]
+	(No symbol) [0x00007FF73C883B80]
+	(No symbol) [0x00007FF73C882B0E]
+	(No symbol) [0x00007FF73C884344]
+	Microsoft::Applications::Events::EventProperties::SetProperty [0x00007FF73CA6B190+182768]
+	(No symbol) [0x00007FF73C93EF45]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CAC94CA+42362]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CACC205+53941]
+	Microsoft::Applications::Events::ILogManager::DispatchEventBroadcast [0x00007FF73CDE7E13+1456611]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB91ABA+863082]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96BA4+883796]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB96CFC+884140]
+	Microsoft::Applications::Events::EventProperty::EventProperty [0x00007FF73CB9FCCE+920958]
+	BaseThreadInitThunk [0x00007FFD555E74B4+20]
+	RtlUserThreadStart [0x00007FFD564A26A1+33]
+</msg>
 </errors>
 </robot>

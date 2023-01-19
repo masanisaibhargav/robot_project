@@ -2,7 +2,7 @@
 Library     SeleniumLibrary
 *** Test Cases ***
 TC1
-    Open Browser    browser=chrome
+    Open Browser    browser=edge
     Maximize Browser Window
     Set Selenium Implicit Wait    30s
     Go To    url=https://nasscom.in
