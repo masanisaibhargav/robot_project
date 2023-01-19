@@ -16,4 +16,22 @@ TC2
     Input Text    css=#email    jack
     Input Password   css=#pass    we234
     Click Element    css=button[name='login']
+TC3
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    30s
+    Go To    url=https://phptravels.net/
+    Click Element    id=select2-hotels_city-container
+    Input Text    locator    text
+    Execute Javascript      document.querySelector('#checkin').values='31-10-2023'
+    Execute Javascript      document.querySelector('#checkout').value='01-11-2023'
+TC4
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    30s
+    Go To    url=https://nasscom.in
+    ${ele}  Get WebElement    xpath=//a[text()='Members Listing']
+    Execute Javascript  arguments[0].click()    ARGUMENTS   ${ele}
+    
+
     
