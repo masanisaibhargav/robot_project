@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230120 17:38:51.132" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo1 App Lunch" source="C:\Users\40032395\OneDrive - LTTS\Robots_projets\appium_suit\demo1_app_lunch.robot">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230121 16:23:48.137" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo2 Android Native App" source="C:\Users\40032395\OneDrive - LTTS\Robots_projets\appium_suit\demo2_android_native_app.robot">
 <test id="s1-t1" name="TC1" line="6">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>remote_url=http://localhost:4723/wd/hub</arg>
@@ -14,101 +14,241 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" starttime="20230120 17:38:51.583" endtime="20230120 17:39:05.169"/>
+<status status="PASS" starttime="20230121 16:23:48.437" endtime="20230121 16:24:00.311"/>
+</kw>
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>30s</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20230121 16:24:00.312" endtime="20230121 16:24:00.313"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>xpath=//*[@text='Dismiss']</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<msg timestamp="20230120 17:39:08.472" level="INFO">xpath criteria: //*[@text='Dismiss']
-xpath criteria: //*[@text='Dismiss']
-xpath criteria: //*[@text='Dismiss']</msg>
-<status status="PASS" starttime="20230120 17:39:05.170" endtime="20230120 17:39:08.476"/>
+<msg timestamp="20230121 16:24:04.165" level="INFO">xpath criteria: //*[@text='Dismiss']</msg>
+<status status="PASS" starttime="20230121 16:24:00.314" endtime="20230121 16:24:04.180"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>xpath=//*[@text='Dismiss']</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230120 17:39:08.478" level="INFO">Clicking element 'xpath=//*[@text='Dismiss']'.</msg>
-<msg timestamp="20230120 17:39:10.884" level="INFO">xpath criteria: //*[@text='Dismiss']</msg>
-<status status="PASS" starttime="20230120 17:39:08.476" endtime="20230120 17:39:10.884"/>
+<msg timestamp="20230121 16:24:04.180" level="INFO">Clicking element 'xpath=//*[@text='Dismiss']'.</msg>
+<msg timestamp="20230121 16:24:04.285" level="INFO">xpath criteria: //*[@text='Dismiss']</msg>
+<status status="PASS" starttime="20230121 16:24:04.180" endtime="20230121 16:24:04.285"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@content-desc='Settings']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:05.448" level="INFO">xpath criteria: //*[@content-desc='Settings']
+xpath criteria: //*[@content-desc='Settings']</msg>
+<status status="PASS" starttime="20230121 16:24:04.285" endtime="20230121 16:24:05.448"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@content-desc='Settings']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:05.448" level="INFO">Clicking element 'xpath=//*[@content-desc='Settings']'.</msg>
+<msg timestamp="20230121 16:24:05.554" level="INFO">xpath criteria: //*[@content-desc='Settings']</msg>
+<status status="PASS" starttime="20230121 16:24:05.448" endtime="20230121 16:24:05.554"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>xpath=//*[@text='Sign in']</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<msg timestamp="20230120 17:39:10.950" level="INFO">xpath criteria: //*[@text='Sign in']</msg>
-<status status="PASS" starttime="20230120 17:39:10.884" endtime="20230120 17:39:10.950"/>
+<msg timestamp="20230121 16:24:06.368" level="INFO">xpath criteria: //*[@text='Sign in']
+xpath criteria: //*[@text='Sign in']</msg>
+<status status="PASS" starttime="20230121 16:24:05.554" endtime="20230121 16:24:06.368"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>xpath=//*[@text='Sign in']</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230120 17:39:10.951" level="INFO">Clicking element 'xpath=//*[@text='Sign in']'.</msg>
-<msg timestamp="20230120 17:39:11.071" level="INFO">xpath criteria: //*[@text='Sign in']</msg>
-<status status="PASS" starttime="20230120 17:39:10.950" endtime="20230120 17:39:11.071"/>
+<msg timestamp="20230121 16:24:06.370" level="INFO">Clicking element 'xpath=//*[@text='Sign in']'.</msg>
+<msg timestamp="20230121 16:24:07.092" level="INFO">xpath criteria: //*[@text='Sign in']</msg>
+<status status="PASS" starttime="20230121 16:24:06.369" endtime="20230121 16:24:07.092"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//*[@text='Sign in']</arg>
+<arg>xpath=//*[@text='Sign up with email']</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<msg timestamp="20230120 17:39:11.724" level="INFO">xpath criteria: //*[@text='Sign in']</msg>
-<status status="PASS" starttime="20230120 17:39:11.072" endtime="20230120 17:39:11.725"/>
+<msg timestamp="20230121 16:24:07.757" level="INFO">xpath criteria: //*[@text='Sign up with email']
+xpath criteria: //*[@text='Sign up with email']</msg>
+<status status="PASS" starttime="20230121 16:24:07.092" endtime="20230121 16:24:07.757"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=//*[@text='Sign in']</arg>
+<arg>xpath=//*[@text='Sign up with email']</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230120 17:39:11.727" level="INFO">Clicking element 'xpath=//*[@text='Sign in']'.</msg>
-<msg timestamp="20230120 17:39:11.816" level="INFO">xpath criteria: //*[@text='Sign in']</msg>
-<status status="PASS" starttime="20230120 17:39:11.725" endtime="20230120 17:39:11.817"/>
+<msg timestamp="20230121 16:24:07.761" level="INFO">Clicking element 'xpath=//*[@text='Sign up with email']'.</msg>
+<msg timestamp="20230121 16:24:07.871" level="INFO">xpath criteria: //*[@text='Sign up with email']</msg>
+<status status="PASS" starttime="20230121 16:24:07.758" endtime="20230121 16:24:07.872"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='First name']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:08.728" level="INFO">xpath criteria: //*[@text='First name']</msg>
+<status status="PASS" starttime="20230121 16:24:07.872" endtime="20230121 16:24:08.728"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
-<arg>xpath=//*[@text='Enter an e-mail address or username']</arg>
-<arg>masani@gmail.com</arg>
+<arg>xpath=//*[@text='First name']</arg>
+<arg>sai</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20230120 17:39:11.820" level="INFO">Typing text 'masani@gmail.com' into text field 'xpath=//*[@text='Enter an e-mail address or username']'</msg>
-<msg timestamp="20230120 17:39:13.944" level="INFO">xpath criteria: //*[@text='Enter an e-mail address or username']</msg>
-<status status="PASS" starttime="20230120 17:39:11.817" endtime="20230120 17:39:13.944"/>
+<msg timestamp="20230121 16:24:08.743" level="INFO">Typing text 'sai' into text field 'xpath=//*[@text='First name']'</msg>
+<msg timestamp="20230121 16:24:09.333" level="INFO">xpath criteria: //*[@text='First name']</msg>
+<status status="PASS" starttime="20230121 16:24:08.728" endtime="20230121 16:24:09.334"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Last name']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:09.999" level="INFO">xpath criteria: //*[@text='Last name']</msg>
+<status status="PASS" starttime="20230121 16:24:09.334" endtime="20230121 16:24:09.999"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//*[@text='Last name']</arg>
+<arg>reddy</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:09.999" level="INFO">Typing text 'reddy' into text field 'xpath=//*[@text='Last name']'</msg>
+<msg timestamp="20230121 16:24:10.565" level="INFO">xpath criteria: //*[@text='Last name']</msg>
+<status status="PASS" starttime="20230121 16:24:09.999" endtime="20230121 16:24:10.565"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Birthday']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:11.100" level="INFO">xpath criteria: //*[@text='Birthday']</msg>
+<status status="PASS" starttime="20230121 16:24:10.565" endtime="20230121 16:24:11.100"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Birthday']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:11.101" level="INFO">Clicking element 'xpath=//*[@text='Birthday']'.</msg>
+<msg timestamp="20230121 16:24:11.199" level="INFO">xpath criteria: //*[@text='Birthday']</msg>
+<status status="PASS" starttime="20230121 16:24:11.100" endtime="20230121 16:24:11.199"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Jun']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:11.834" level="INFO">xpath criteria: //*[@text='Jun']
+xpath criteria: //*[@text='Jun']</msg>
+<status status="PASS" starttime="20230121 16:24:11.199" endtime="20230121 16:24:11.834"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Jun']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:11.835" level="INFO">Clicking element 'xpath=//*[@text='Jun']'.</msg>
+<msg timestamp="20230121 16:24:13.461" level="INFO">xpath criteria: //*[@text='Jun']</msg>
+<status status="PASS" starttime="20230121 16:24:11.834" endtime="20230121 16:24:13.461"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Jun']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:13.505" level="INFO">xpath criteria: //*[@text='Jun']</msg>
+<status status="PASS" starttime="20230121 16:24:13.461" endtime="20230121 16:24:13.505"/>
+</kw>
+<kw name="Clear Text" library="AppiumLibrary">
+<arg>xpath=//*[@text='Jun']</arg>
+<doc>Clears the text field identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:13.509" level="INFO">Clear text field 'xpath=//*[@text='Jun']'</msg>
+<msg timestamp="20230121 16:24:13.572" level="INFO">xpath criteria: //*[@text='Jun']</msg>
+<status status="PASS" starttime="20230121 16:24:13.505" endtime="20230121 16:24:13.572"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//*[@resource-id='android:id/numberpicker_input']</arg>
+<arg>Dec</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:13.572" level="INFO">Typing text 'Dec' into text field 'xpath=//*[@resource-id='android:id/numberpicker_input']'</msg>
+<msg timestamp="20230121 16:24:14.260" level="INFO">xpath criteria: //*[@resource-id='android:id/numberpicker_input']</msg>
+<status status="PASS" starttime="20230121 16:24:13.572" endtime="20230121 16:24:14.260"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='01']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:15.117" level="INFO">xpath criteria: //*[@text='01']</msg>
+<status status="PASS" starttime="20230121 16:24:14.260" endtime="20230121 16:24:15.117"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='01']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:15.118" level="INFO">Clicking element 'xpath=//*[@text='01']'.</msg>
+<msg timestamp="20230121 16:24:15.270" level="INFO">xpath criteria: //*[@text='01']</msg>
+<status status="PASS" starttime="20230121 16:24:15.117" endtime="20230121 16:24:15.270"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=(//*[@resource-id='android:id/numberpicker_input'])[2]</arg>
+<arg>30</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:15.272" level="INFO">Typing text '30' into text field 'xpath=(//*[@resource-id='android:id/numberpicker_input'])[2]'</msg>
+<msg timestamp="20230121 16:24:16.689" level="INFO">xpath criteria: (//*[@resource-id='android:id/numberpicker_input'])[2]</msg>
+<status status="PASS" starttime="20230121 16:24:15.270" endtime="20230121 16:24:16.689"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='2000']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:17.321" level="INFO">xpath criteria: //*[@text='2000']</msg>
+<status status="PASS" starttime="20230121 16:24:16.689" endtime="20230121 16:24:17.321"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='2000']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:17.337" level="INFO">Clicking element 'xpath=//*[@text='2000']'.</msg>
+<msg timestamp="20230121 16:24:18.040" level="INFO">xpath criteria: //*[@text='2000']</msg>
+<status status="PASS" starttime="20230121 16:24:17.321" endtime="20230121 16:24:18.040"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=(//*[@resource-id='android:id/numberpicker_input'])[3]</arg>
+<arg>1996</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:18.048" level="INFO">Typing text '1996' into text field 'xpath=(//*[@resource-id='android:id/numberpicker_input'])[3]'</msg>
+<msg timestamp="20230121 16:24:19.100" level="INFO">xpath criteria: (//*[@resource-id='android:id/numberpicker_input'])[3]</msg>
+<status status="PASS" starttime="20230121 16:24:18.040" endtime="20230121 16:24:19.100"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='OK']</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:19.100" level="INFO">Clicking element 'xpath=//*[@text='OK']'.</msg>
+<msg timestamp="20230121 16:24:19.814" level="INFO">xpath criteria: //*[@text='OK']</msg>
+<status status="PASS" starttime="20230121 16:24:19.100" endtime="20230121 16:24:19.814"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Email address']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:20.115" level="INFO">xpath criteria: //*[@text='Email address']</msg>
+<status status="PASS" starttime="20230121 16:24:19.814" endtime="20230121 16:24:20.115"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//*[@text='Email address']</arg>
+<arg>masani@123</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230121 16:24:20.117" level="INFO">Typing text 'masani@123' into text field 'xpath=//*[@text='Email address']'</msg>
+<msg timestamp="20230121 16:24:21.168" level="INFO">xpath criteria: //*[@text='Email address']</msg>
+<status status="PASS" starttime="20230121 16:24:20.116" endtime="20230121 16:24:21.169"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//*[@text='Password']</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230121 16:24:22.818" level="INFO">xpath criteria: //*[@text='Password']</msg>
+<status status="PASS" starttime="20230121 16:24:21.169" endtime="20230121 16:24:22.818"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>xpath=//*[@text='Password']</arg>
 <arg>sai123</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20230120 17:39:13.948" level="INFO">Typing text 'sai123' into text field 'xpath=//*[@text='Password']'</msg>
-<msg timestamp="20230120 17:39:15.017" level="INFO">xpath criteria: //*[@text='Password']</msg>
-<status status="PASS" starttime="20230120 17:39:13.945" endtime="20230120 17:39:15.017"/>
+<msg timestamp="20230121 16:24:22.818" level="INFO">Typing text 'sai123' into text field 'xpath=//*[@text='Password']'</msg>
+<msg timestamp="20230121 16:24:23.392" level="INFO">xpath criteria: //*[@text='Password']</msg>
+<status status="PASS" starttime="20230121 16:24:22.818" endtime="20230121 16:24:23.392"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=(//*[@text='Sign in'])[2]</arg>
+<arg>xpath=//*[@text='CREATE']</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<msg timestamp="20230120 17:39:15.836" level="INFO">xpath criteria: (//*[@text='Sign in'])[2]</msg>
-<status status="PASS" starttime="20230120 17:39:15.017" endtime="20230120 17:39:15.836"/>
+<msg timestamp="20230121 16:24:23.959" level="INFO">xpath criteria: //*[@text='CREATE']</msg>
+<status status="PASS" starttime="20230121 16:24:23.392" endtime="20230121 16:24:23.959"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
-<arg>xpath=(//*[@text='Sign in'])[2]</arg>
+<arg>xpath=//*[@text='CREATE']</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230120 17:39:15.836" level="INFO">Clicking element 'xpath=(//*[@text='Sign in'])[2]'.</msg>
-<msg timestamp="20230120 17:39:15.939" level="INFO">xpath criteria: (//*[@text='Sign in'])[2]</msg>
-<status status="PASS" starttime="20230120 17:39:15.836" endtime="20230120 17:39:15.939"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<arg>xpath=//*[@text='There was an issue signing in']</arg>
-<doc>Waits until element specified with `locator` appears on current page.</doc>
-<msg timestamp="20230120 17:39:17.173" level="INFO">xpath criteria: //*[@text='There was an issue signing in']
-xpath criteria: //*[@text='There was an issue signing in']
-xpath criteria: //*[@text='There was an issue signing in']</msg>
-<status status="PASS" starttime="20230120 17:39:15.939" endtime="20230120 17:39:17.173"/>
-</kw>
-<kw name="Element Should Contain Text" library="AppiumLibrary">
-<arg>xpath=//*[@text='There was an issue signing in']</arg>
-<arg>There was an issue signing in</arg>
-<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230120 17:39:17.177" level="INFO">Verifying element 'xpath=//*[@text='There was an issue signing in']' contains text 'There was an issue signing in'.</msg>
-<msg timestamp="20230120 17:39:17.235" level="INFO">xpath criteria: //*[@text='There was an issue signing in']</msg>
-<status status="PASS" starttime="20230120 17:39:17.174" endtime="20230120 17:39:17.235"/>
+<msg timestamp="20230121 16:24:23.959" level="INFO">Clicking element 'xpath=//*[@text='CREATE']'.</msg>
+<msg timestamp="20230121 16:24:25.778" level="INFO">xpath criteria: //*[@text='CREATE']</msg>
+<status status="PASS" starttime="20230121 16:24:23.959" endtime="20230121 16:24:25.778"/>
 </kw>
 <kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20230120 17:39:17.236" endtime="20230120 17:39:17.910"/>
+<status status="PASS" starttime="20230121 16:24:25.778" endtime="20230121 16:24:26.246"/>
 </kw>
-<status status="PASS" starttime="20230120 17:38:51.583" endtime="20230120 17:39:17.911"/>
+<status status="PASS" starttime="20230121 16:23:48.437" endtime="20230121 16:24:26.247"/>
 </test>
-<status status="PASS" starttime="20230120 17:38:51.137" endtime="20230120 17:39:17.912"/>
+<status status="PASS" starttime="20230121 16:23:48.152" endtime="20230121 16:24:26.248"/>
 </suite>
 <statistics>
 <total>
@@ -117,7 +257,7 @@ xpath criteria: //*[@text='There was an issue signing in']</msg>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo1 App Lunch">Demo1 App Lunch</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo2 Android Native App">Demo2 Android Native App</stat>
 </suite>
 </statistics>
 <errors>
