@@ -41,10 +41,16 @@ TC1
   Input Text   xpath=//*[@text='Password']     sai123
   Wait Until Page Contains Element    xpath=//*[@text='CREATE']
   Click Element   xpath=//*[@text='CREATE']     
-
-
-
-
-
-
   [Teardown]      Close Application
+
+TC2
+     Open Application    remote_url=http://localhost:4723/wd/hub
+  ...   platformName=android
+  ...   deviceName=oneplus
+  ...   appPackage=org.khanacademy.android
+  ...   appActivity=org.khanacademy.android.ui.library.MainActivity
+  ...   noReset=true
+
+   [Teardown]    Close Application
+
+
