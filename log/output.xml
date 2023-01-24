@@ -1,187 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230124 06:01:25.893" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo12 Open Emr" source="C:\Users\40032395\OneDrive - LTTS\Robots_projets\selenium_suits\demo12_open_emr.robot">
-<test id="s1-t1" name="Tc1" line="4">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230124 06:01:26.247" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230124 06:01:26.247" endtime="20230124 06:01:28.161"/>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230124 10:39:59.935" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo5 Ios Native App" source="C:\Users\40032395\OneDrive - LTTS\Robots_projets\appium_suit\demo5_ios_native_app.robot">
+<test id="s1-t1" name="TC1" line="6">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${dic}</var>
+<arg>buildName=khan lt7 New</arg>
+<arg>projectName=khan project lt7</arg>
+<arg>userName=masanisaibhargav_mhXe84</arg>
+<arg>accessKey=38qjokFK9kamwCwgd5N6</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230124 10:40:00.333" level="INFO">${dic} = {'buildName': 'khan lt7 New', 'projectName': 'khan project lt7', 'userName': 'masanisaibhargav_mhXe84', 'accessKey': '38qjokFK9kamwCwgd5N6'}</msg>
+<status status="PASS" starttime="20230124 10:40:00.333" endtime="20230124 10:40:00.341"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230124 06:01:28.162" endtime="20230124 06:01:28.305"/>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>remote_url=http://hub.browserstack.com/wd/hub</arg>
+<arg>platformName=ios</arg>
+<arg>deviceName=iPhone 11 Pro</arg>
+<arg>app=bs://04323ba077ba05e310700dab0771d7f22543baa3</arg>
+<arg>platformVersion=13</arg>
+<arg>bstack:options=${dic}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230124 10:40:00.341" endtime="20230124 10:40:50.968"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>50s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230124 06:01:28.306" endtime="20230124 06:01:28.317"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeTextField[@name="test-Username"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 10:40:52.587" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="test-Username"]</msg>
+<status status="PASS" starttime="20230124 10:40:50.969" endtime="20230124 10:40:52.587"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=http://demo.openemr.io/b/openemr/</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230124 06:01:28.318" level="INFO">Opening url 'http://demo.openemr.io/b/openemr/'</msg>
-<status status="PASS" starttime="20230124 06:01:28.317" endtime="20230124 06:01:37.413"/>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeTextField[@name="test-Username"]</arg>
+<arg>standard_user</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230124 10:40:52.588" level="INFO">Typing text 'standard_user' into text field 'xpath=//XCUIElementTypeTextField[@name="test-Username"]'</msg>
+<msg timestamp="20230124 10:40:58.896" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="test-Username"]</msg>
+<status status="PASS" starttime="20230124 10:40:52.588" endtime="20230124 10:40:58.896"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=authUser</arg>
-<arg>admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:37.416" level="INFO">Typing text 'admin' into text field 'name=authUser'.</msg>
-<status status="PASS" starttime="20230124 06:01:37.414" endtime="20230124 06:01:37.545"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeSecureTextField[@name="test-Password"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 10:40:59.948" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@name="test-Password"]</msg>
+<status status="PASS" starttime="20230124 10:40:58.896" endtime="20230124 10:40:59.948"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>name=clearPass</arg>
-<arg>pass</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:37.547" level="INFO">Typing password into text field 'name=clearPass'.</msg>
-<msg timestamp="20230124 06:01:37.605" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230124 06:01:37.675" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230124 06:01:37.546" endtime="20230124 06:01:37.676"/>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeSecureTextField[@name="test-Password"]</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230124 10:40:59.964" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//XCUIElementTypeSecureTextField[@name="test-Password"]'</msg>
+<msg timestamp="20230124 10:41:04.820" level="INFO">xpath criteria: //XCUIElementTypeSecureTextField[@name="test-Password"]</msg>
+<status status="PASS" starttime="20230124 10:40:59.948" endtime="20230124 10:41:04.826"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=languageChoice</arg>
-<arg>English (Indian)</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230124 06:01:37.677" level="INFO">Selecting options from selection list 'name=languageChoice' by label English (Indian).</msg>
-<status status="PASS" starttime="20230124 06:01:37.676" endtime="20230124 06:01:37.819"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-LOGIN"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 10:41:06.262" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-LOGIN"]</msg>
+<status status="PASS" starttime="20230124 10:41:04.826" endtime="20230124 10:41:06.262"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=login-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:37.821" level="INFO">Clicking element 'id=login-button'.</msg>
-<status status="PASS" starttime="20230124 06:01:37.819" endtime="20230124 06:01:47.862"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-LOGIN"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:06.263" level="INFO">Clicking element 'xpath=//XCUIElementTypeOther[@name="test-LOGIN"]'.</msg>
+<msg timestamp="20230124 10:41:08.153" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-LOGIN"]</msg>
+<status status="PASS" starttime="20230124 10:41:06.263" endtime="20230124 10:41:08.154"/>
 </kw>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>xpath=//div[@class='menuLabel px-1 dropdown-toggle oe-dropdown-toggle']</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20230124 06:01:47.864" level="INFO">Simulating Mouse Over on element 'xpath=//div[@class='menuLabel px-1 dropdown-toggle oe-dropdown-toggle']'.</msg>
-<status status="PASS" starttime="20230124 06:01:47.863" endtime="20230124 06:01:48.159"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=(//XCUIElementTypeOther[@name="test-ADD TO CART"])[1]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 10:41:12.059" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="test-ADD TO CART"])[1]</msg>
+<status status="PASS" starttime="20230124 10:41:08.155" endtime="20230124 10:41:12.059"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//div[text()='New/Search']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:48.160" level="INFO">Clicking element 'xpath=//div[text()='New/Search']'.</msg>
-<status status="PASS" starttime="20230124 06:01:48.160" endtime="20230124 06:01:48.254"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=(//XCUIElementTypeOther[@name="test-ADD TO CART"])[1]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:12.059" level="INFO">Clicking element 'xpath=(//XCUIElementTypeOther[@name="test-ADD TO CART"])[1]'.</msg>
+<msg timestamp="20230124 10:41:13.969" level="INFO">xpath criteria: (//XCUIElementTypeOther[@name="test-ADD TO CART"])[1]</msg>
+<status status="PASS" starttime="20230124 10:41:12.059" endtime="20230124 10:41:13.969"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//iframe[@name='pat']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20230124 06:01:48.257" level="INFO">Selecting frame 'xpath=//iframe[@name='pat']'.</msg>
-<status status="PASS" starttime="20230124 06:01:48.255" endtime="20230124 06:01:58.494"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-Cart"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 10:41:16.321" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-Cart"]</msg>
+<status status="PASS" starttime="20230124 10:41:13.969" endtime="20230124 10:41:16.321"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=form_title</arg>
-<arg>Mr.</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230124 06:01:58.496" level="INFO">Selecting options from selection list 'name=form_title' by label Mr..</msg>
-<status status="PASS" starttime="20230124 06:01:58.495" endtime="20230124 06:01:58.601"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-Cart"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:16.321" level="INFO">Clicking element 'xpath=//XCUIElementTypeOther[@name="test-Cart"]'.</msg>
+<msg timestamp="20230124 10:41:18.417" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-Cart"]</msg>
+<status status="PASS" starttime="20230124 10:41:16.321" endtime="20230124 10:41:18.418"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=form_fname</arg>
-<arg>sai</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:58.602" level="INFO">Typing text 'sai' into text field 'id=form_fname'.</msg>
-<status status="PASS" starttime="20230124 06:01:58.601" endtime="20230124 06:01:58.813"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-CHECKOUT"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 10:41:19.348" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-CHECKOUT"]</msg>
+<status status="PASS" starttime="20230124 10:41:18.418" endtime="20230124 10:41:19.348"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=form_mname</arg>
-<arg>bhargav</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:58.814" level="INFO">Typing text 'bhargav' into text field 'id=form_mname'.</msg>
-<status status="PASS" starttime="20230124 06:01:58.813" endtime="20230124 06:01:58.951"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-CHECKOUT"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:19.348" level="INFO">Clicking element 'xpath=//XCUIElementTypeOther[@name="test-CHECKOUT"]'.</msg>
+<msg timestamp="20230124 10:41:23.698" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-CHECKOUT"]</msg>
+<status status="PASS" starttime="20230124 10:41:19.348" endtime="20230124 10:41:23.698"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=form_lname</arg>
-<arg>reddy</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:58.952" level="INFO">Typing text 'reddy' into text field 'id=form_lname'.</msg>
-<status status="PASS" starttime="20230124 06:01:58.951" endtime="20230124 06:01:59.092"/>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeTextField[@name="test-First Name"]</arg>
+<arg>john</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:23.698" level="INFO">Typing text 'john' into text field 'xpath=//XCUIElementTypeTextField[@name="test-First Name"]'</msg>
+<msg timestamp="20230124 10:41:28.209" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="test-First Name"]</msg>
+<status status="PASS" starttime="20230124 10:41:23.698" endtime="20230124 10:41:28.210"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=form_suffix</arg>
-<arg>masani</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:59.094" level="INFO">Typing text 'masani' into text field 'id=form_suffix'.</msg>
-<status status="PASS" starttime="20230124 06:01:59.092" endtime="20230124 06:01:59.231"/>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeTextField[@name="test-Last Name"]</arg>
+<arg>jo</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:28.210" level="INFO">Typing text 'jo' into text field 'xpath=//XCUIElementTypeTextField[@name="test-Last Name"]'</msg>
+<msg timestamp="20230124 10:41:34.723" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="test-Last Name"]</msg>
+<status status="PASS" starttime="20230124 10:41:28.210" endtime="20230124 10:41:34.723"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=form_DOB</arg>
-<arg>24-01-2023</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:59.233" level="INFO">Typing text '24-01-2023' into text field 'name=form_DOB'.</msg>
-<status status="PASS" starttime="20230124 06:01:59.231" endtime="20230124 06:01:59.385"/>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeTextField[@name="test-Zip/Postal Code"]</arg>
+<arg>100022</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:34.726" level="INFO">Typing text '100022' into text field 'xpath=//XCUIElementTypeTextField[@name="test-Zip/Postal Code"]'</msg>
+<msg timestamp="20230124 10:41:38.171" level="INFO">xpath criteria: //XCUIElementTypeTextField[@name="test-Zip/Postal Code"]</msg>
+<status status="PASS" starttime="20230124 10:41:34.725" endtime="20230124 10:41:38.171"/>
 </kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>name=form_sex</arg>
-<arg>Male</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20230124 06:01:59.386" level="INFO">Selecting options from selection list 'name=form_sex' by label Male.</msg>
-<status status="PASS" starttime="20230124 06:01:59.385" endtime="20230124 06:01:59.575"/>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-CONTINUE"]</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230124 10:41:40.126" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-CONTINUE"]</msg>
+<status status="PASS" starttime="20230124 10:41:38.171" endtime="20230124 10:41:40.126"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=create</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230124 06:01:59.577" level="INFO">Clicking element 'id=create'.</msg>
-<status status="PASS" starttime="20230124 06:01:59.576" endtime="20230124 06:01:59.769"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>xpath=//XCUIElementTypeOther[@name="test-CONTINUE"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230124 10:41:40.130" level="INFO">Clicking element 'xpath=//XCUIElementTypeOther[@name="test-CONTINUE"]'.</msg>
+<msg timestamp="20230124 10:41:44.735" level="INFO">xpath criteria: //XCUIElementTypeOther[@name="test-CONTINUE"]</msg>
+<status status="PASS" starttime="20230124 10:41:40.127" endtime="20230124 10:41:44.735"/>
 </kw>
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20230124 06:01:59.770" endtime="20230124 06:01:59.780"/>
+<kw name="Close Application" library="AppiumLibrary" type="TEARDOWN">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20230124 10:41:44.735" endtime="20230124 10:41:48.994"/>
 </kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//iframe[@id='modalframe']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20230124 06:01:59.781" level="INFO">Selecting frame 'xpath=//iframe[@id='modalframe']'.</msg>
-<status status="PASS" starttime="20230124 06:01:59.780" endtime="20230124 06:02:00.443"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//input[@onclick='dlgclose("srcConfirmSave", false);']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230124 06:02:00.444" level="INFO">Clicking element 'xpath=//input[@onclick='dlgclose("srcConfirmSave", false);']'.</msg>
-<status status="PASS" starttime="20230124 06:02:00.443" endtime="20230124 06:02:00.562"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>15s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230124 06:02:15.565" level="INFO">Slept 15 seconds</msg>
-<status status="PASS" starttime="20230124 06:02:00.563" endtime="20230124 06:02:15.566"/>
-</kw>
-<kw name="Handle Alert" library="SeleniumLibrary">
-<var>${alert_text}</var>
-<arg>action=ACCEPT</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20230124 06:02:15.567" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg timestamp="20230124 06:02:15.582" level="INFO">${alert_text} = New Due Clinical Reminders  Assessment: Tobacco  (See the Clinical Reminders widget for more details)</msg>
-<status status="PASS" starttime="20230124 06:02:15.566" endtime="20230124 06:02:15.582"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${alert_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230124 06:02:15.583" endtime="20230124 06:02:15.584"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//div[@class='closeDlgIframe']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230124 06:02:15.587" level="INFO">Clicking element 'xpath=//div[@class='closeDlgIframe']'.</msg>
-<status status="PASS" starttime="20230124 06:02:15.585" endtime="20230124 06:02:15.755"/>
-</kw>
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>xpath=//iframe[@name='pat']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20230124 06:02:15.756" level="INFO">Selecting frame 'xpath=//iframe[@name='pat']'.</msg>
-<status status="PASS" starttime="20230124 06:02:15.755" endtime="20230124 06:02:15.790"/>
-</kw>
-<kw name="Element Should Contain" library="SeleniumLibrary">
-<arg>xpath=//h2[contains(text(),'Medical Record Dashboard')]</arg>
-<arg>sai bhargav reddy masani</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20230124 06:02:15.840" level="INFO">Element 'xpath=//h2[contains(text(),'Medical Record Dashboard')]' contains text 'sai bhargav reddy masani'.</msg>
-<status status="PASS" starttime="20230124 06:02:15.791" endtime="20230124 06:02:15.840"/>
-</kw>
-<status status="PASS" starttime="20230124 06:01:26.247" endtime="20230124 06:02:15.840"/>
+<status status="PASS" starttime="20230124 10:40:00.333" endtime="20230124 10:41:48.994"/>
 </test>
-<status status="PASS" starttime="20230124 06:01:25.898" endtime="20230124 06:02:15.841"/>
+<status status="PASS" starttime="20230124 10:39:59.952" endtime="20230124 10:41:48.994"/>
 </suite>
 <statistics>
 <total>
@@ -190,7 +160,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo12 Open Emr">Demo12 Open Emr</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo5 Ios Native App">Demo5 Ios Native App</stat>
 </suite>
 </statistics>
 <errors>

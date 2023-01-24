@@ -22,5 +22,9 @@ Tc4
     Input Text    id:input_username    text=sai@gmail.com
     Input Password    id=input_password    password=masani@123
     Clear Element    id=input_go
-
-    
+TC5
+    Open Browser        browser=chrome
+    ${output}       Run Keyword And Ignore Error    Click Element    xpath=//a
+    Log To Console    $(output)
+    Log To Console    $(output){0}
+    Log To Console    $(output){1}
